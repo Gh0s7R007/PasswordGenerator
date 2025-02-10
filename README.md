@@ -20,4 +20,4 @@ A simple and user-friendly password generator built with Python and Tkinter. Thi
 1. Clone this repository:
    ```bash
    git clone https://github.com/Gh0s7R007/PasswordGenerator.git
-   cd password-generator
+   cd PasswordGenerator
