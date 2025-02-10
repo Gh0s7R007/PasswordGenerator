@@ -1,3 +1,4 @@
+# password_generator.py
 import random
 import string
 
@@ -37,24 +38,9 @@ def password_strength(password):
 
     if score <= 50:
         strength = "Weak"
-    elif score < 70:
+    elif score < 80:
         strength = "Medium"
     else:
         strength = "Strong"
 
     return strength, score
-
-def user_input():
-    """Get user-defined parameters for password generation."""
-    length = int(input("Enter password length (8 to 32): "))
-    use_upper = input("Include uppercase letters? (y/n): ").strip().lower() in ['y', '']
-    use_lower = input("Include lowercase letters? (y/n): ").strip().lower() in ['y', '']
-    use_numbers = input("Include numbers? (y/n): ").strip().lower() in ['y', '']
-    use_special = input("Include special characters? (y/n): ").strip().lower() in ['y', '']
-
-    if length < 8 or length > 32:
-        print("Length must be between 8 and 32.")
-        return None
-    
-    return length, use_upper, use_lower, use_numbers, use_special
-
